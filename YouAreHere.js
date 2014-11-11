@@ -116,10 +116,7 @@ $(document).ready(function()
         document.addEventListener("menubutton", onMenuKeyDown, false);
     }
 
-    // Handle the menu button
-    //
-    function onMenuKeyDown() {
-    }
+   
    // END MENU *******************************
 
 	
@@ -183,6 +180,15 @@ function success(position)
 
 
 //----------------------- Menu clicked ---------------------------- 
+
+ // Handle the menu button
+    //
+    function onMenuKeyDown() {
+	
+	alert();
+    }
+
+
 
 function search(n)
 {
