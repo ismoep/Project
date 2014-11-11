@@ -195,7 +195,7 @@ function insertHeader(n){
 		    	cell2.innerHTML = "Address";
 	    	 };
 	    	
-	    	cell1.innerHTML.bgColor = "grey";
+	 
 }
 
 
@@ -307,21 +307,24 @@ function detailsRequest(index, placeid)
 //------------------------------------------------------------------------------------------------
 
 function clearSearch(n){
+
 	//--- Delete rows in the results -table
 	if (document.getElementById("results").rows.length>0){	
 		clearTable();		
+		
+		
 	}
 	insertHeader(n);
 	
 	//Clear the data stores
   	
-  	for (i=0;i<10;i++){
+  /*	for (i=0;i<10;i++){
   		placeList[i] = 0;
   	    placeName[i] = "";
   	    placeVicinity[i]= "";
   	    placeWebsite[i]="";
   	}
-
+*/
 	// Deletes all markers in the array by removing references to them
 	deleteOverlays();
 	
@@ -330,11 +333,16 @@ function clearSearch(n){
 
 //Removes items in the 'result' -table before a new search.
 //Removes the last row until all rows have been removed.
-function clearTable(){		
+function clearTable(){	
+	k=0;	
 	do{	
-		document.getElementById("results").deleteRow(-1);		
+		document.getElementById("results").deleteRow(-1);	
+		placeList[k] = 0;
+  	    placeName[k] = "";
+  	    placeVicinity[k]= "";
+  	    placeWebsite[k]="";
+		k++;			
 	}
-	
 	// Let's leave the heading row in the table
 	while (document.getElementById("results").rows.length>0);		
 }
