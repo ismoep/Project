@@ -318,13 +318,13 @@ function clearSearch(n){
 	
 	//Clear the data stores
   	
-  /*	for (i=0;i<10;i++){
+  	for (i=0;i<10;i++){
   		placeList[i] = 0;
   	    placeName[i] = "";
   	    placeVicinity[i]= "";
   	    placeWebsite[i]="";
   	}
-*/
+
 	// Deletes all markers in the array by removing references to them
 	deleteOverlays();
 	
@@ -334,14 +334,10 @@ function clearSearch(n){
 //Removes items in the 'result' -table before a new search.
 //Removes the last row until all rows have been removed.
 function clearTable(){	
-	k=0;	
+	
 	do{	
 		document.getElementById("results").deleteRow(-1);	
-		placeList[k] = 0;
-  	    placeName[k] = "";
-  	    placeVicinity[k]= "";
-  	    placeWebsite[k]="";
-		k++;			
+				
 	}
 	// Let's leave the heading row in the table
 	while (document.getElementById("results").rows.length>0);		
@@ -381,7 +377,7 @@ function insertData(index,website){
 	  
 		 // Store website, the rest is already stored.
 		  placeWebsite[index]=website;
-	
+	navigator.vibrate([50,10,50]);
 		// Data for all 10 rows is now collected
        if (dataCollected==9){
        
@@ -409,7 +405,7 @@ function insertData(index,website){
 	    
 	  	
 	        // Vibrate for 1 seconds
-			navigator.vibrate([50,10,50]);
+			
 
 	      
 		};
