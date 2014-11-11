@@ -14,5 +14,5 @@ Project work at School
 Ismo
 </author>
 <icon src="icon.png" />
-<gap:plugin name="org.apache.cordova.geolocation" version="0.3.3" />
+<gap:plugin name="org.apache.cordova.geolocation" />
 </widget>
