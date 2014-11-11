@@ -401,7 +401,7 @@ function insertData(index,website){
 	    
 	  	
 	        // Vibrate for 1 seconds
-			navigator.vibrate(1000);
+			navigator.vibrate([500,200,500]);
 
 	      
 		};
