@@ -14,8 +14,12 @@ Project work at School
 Ismo
 </author>
 <icon src="icon.png" />
+<gap:platform name="android" />
+<preference name="android-minSdkVersion" value="10" /> 
+<preference name="splash-screen-duration" value="10000"/> 
+
 <gap:plugin name="org.apache.cordova.geolocation" />
 <gap:plugin name="org.apache.cordova.vibration" />
-<gap:plugin name="org.apache.cordova.inappbrowser" />
+
 
 </widget>
