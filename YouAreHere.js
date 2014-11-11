@@ -106,6 +106,23 @@
 //----------------When the document is fully loaded the map may be initialized------------------
 $(document).ready(function()
 {
+	// MENU**********************************************************************************
+    document.addEventListener("deviceready", onDeviceReady, false);
+   
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+    }
+
+    // Handle the menu button
+    //
+    function onMenuKeyDown() {
+    }
+   // END MENU *******************************
+
+	
 	navigator.geologation.getCurrentPosition(initialize);	
 	
 });
@@ -160,10 +177,8 @@ function success(position)
       
 }
 
-function exitSystem(){
-	system.exit();
 
-}
+
 
 
 
