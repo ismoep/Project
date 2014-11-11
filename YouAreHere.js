@@ -400,8 +400,8 @@ function insertData(index,website){
 		  };
 	    
 	  	
-	        // Vibrate for 3 seconds
-			navigator.vibrate(3000);
+	        // Vibrate for 1 seconds
+			navigator.vibrate(1000);
 
 	      
 		};
