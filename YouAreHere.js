@@ -160,6 +160,11 @@ function success(position)
       
 }
 
+function exitSystem(){
+	system.exit();
+
+}
+
 
 
 //----------------------- Menu clicked ---------------------------- 
@@ -372,12 +377,13 @@ function insertData(index,website){
 	  var link;
 	  var table = document.getElementById("results");
 	  
+	   
 	  // One more item.
 	  dataCollected++;
-	  
+	 
 		 // Store website, the rest is already stored.
 		  placeWebsite[index]=website;
-	navigator.vibrate([50,10,50]);
+	
 		// Data for all 10 rows is now collected
        if (dataCollected==9){
        
@@ -404,8 +410,8 @@ function insertData(index,website){
 		  };
 	    
 	  	
-	        // Vibrate for 1 seconds
-			
+	        // Vibrate couple of times when ready
+			navigator.vibrate([50,10,50]);
 
 	      
 		};
