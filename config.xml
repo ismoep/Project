@@ -15,4 +15,5 @@ Ismo
 </author>
 <icon src="icon.png" />
 <gap:plugin name="org.apache.cordova.geolocation" />
+<gap:plugin name="org.apache.cordova.vibration" />
 </widget>
